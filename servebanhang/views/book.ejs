@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input{display: block}
+    </style>
+</head>
+<body>
+    
+    <form action="" method="post" enctype="multipart/form-data">
+        The loai
+        <!--day data vao option-->
+        <select name="selectCate">
+           <% Cates.forEach(function(cate){%>
+                <option value="<%- cate._id%>"><%- cate.name%></option>
+           <% }); %>
+        </select>
+        
+        <input type="text" name="txtbook" placeholder="ten cuon sach"/>
+        <input type="file" name="fileimg" placeholder="hinh"/>
+        <input type="text" name="txtFile" placeholder="duong dan file">
+        <input type="submit" name="btnAdd" value="Add">
+    </form>
+</body>
+</html>
